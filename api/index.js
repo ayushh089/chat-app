@@ -15,8 +15,8 @@ const fileUpload = require("express-fileupload");
 mongoose.set("strictQuery", false);
 dotenv.config();
 mongoose
-  .connect("mongodb://localhost:27017/mernchatt")
-  // .connect(process.env.MONGO_URL)
+  // .connect("mongodb://localhost:27017/mernchatt")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("Connected to database");
   })
